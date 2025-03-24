@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watermelon</title>
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <style>
+    /* 加载过渡效果 */
+    .fade-in {
+      animation: fadeInAnimation 0.3s ease-in-out;
+    }
+    
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .logo-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container fade-in">
+    <div class="chat-header">
+      <div class="logo">
+        <img src="images/icon48.png" alt="Watermelon图标" class="logo-icon">
+        <h1>Watermelon</h1>
+      </div>
+      <div class="header-actions">
+        <!-- 返回首页按钮，默认在聊天界面时显示 -->
+        <button id="back-to-home" class="icon-button" title="返回首页" style="display: none;">
+          <span class="material-symbols-outlined">home</span>
+        </button>
+        <button id="clear-chat" class="icon-button" title="清除聊天记录">
+          <span class="material-symbols-outlined">delete</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- 聊天界面 - 默认隐藏 -->
+    <div class="chat-messages" id="chat-messages" style="display:none;">
+      <div class="message ai-message">
+        <div class="message-content">
+          <p>你好！我是Watermelon AI助手。有什么我可以帮助你的吗？</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 欢迎页面 -->
+    <div class="welcome-container" id="welcome-container">
+      <div class="welcome-title">
+        <span class="welcome-emoji">👋</span>
+        <span>欢迎</span>
+      </div>
+      
+      <div class="tools-section">
+        <h3 style="margin-bottom: 12px; font-size: 16px;">工具</h3>
+        <div class="tools-grid">
+          <div class="tool-card" data-tool="fullscreen">
+            <span class="material-symbols-outlined tool-card-icon">fullscreen</span>
+            <span class="tool-card-title">全屏聊天</span>
+          </div>
+          <div class="tool-card" data-tool="translate">
+            <span class="material-symbols-outlined tool-card-icon">translate</span>
+            <span class="tool-card-title">翻译</span>
+          </div>
+          <div class="tool-card" data-tool="summary">
+            <span class="material-symbols-outlined tool-card-icon">summarize</span>
+            <span class="tool-card-title">总结</span>
+          </div>
+          <div class="tool-card" data-tool="deepthink">
+            <span class="material-symbols-outlined tool-card-icon">psychology</span>
+            <span class="tool-card-title">深度思考</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 固定的聊天输入框 -->
+    <div class="chat-input-container" id="chat-input-container">
+      <textarea id="message-input" placeholder="输入消息..." rows="1"></textarea>
+      <button id="send-button" class="icon-button" title="发送消息">
+        <span class="material-symbols-outlined">send</span>
+      </button>
+    </div>
+  </div>
+  
+  <script src="js/sidebar.js"></script>
+</body>
+</html> 

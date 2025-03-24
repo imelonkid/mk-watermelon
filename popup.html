@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watermelon</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 300px;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.5;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      animation: fadeInAnimation 0.3s ease-in-out;
+    }
+    
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin: 0;
+      color: #5E85F8;
+      font-weight: 600;
+    }
+    
+    p {
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
+      line-height: 1.5;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo-icon {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .main-button {
+      background-color: #5E85F8;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 24px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: all 0.2s;
+      width: 100%;
+      font-weight: 500;
+    }
+    
+    .main-button:hover {
+      background-color: #4a6fd3;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(94, 133, 248, 0.3);
+    }
+    
+    .main-button:active {
+      transform: translateY(0);
+    }
+    
+    .settings-link {
+      color: #5E85F8;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+    
+    .settings-link:hover {
+      background-color: rgba(94, 133, 248, 0.1);
+    }
+    
+    .api-key-status {
+      font-size: 13px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 5px;
+      width: 100%;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .warning {
+      background-color: #fef7e0;
+      color: #b06000;
+    }
+    
+    .success {
+      background-color: #e6f4ea;
+      color: #137333;
+    }
+    
+    .button-container {
+      width: 100%;
+    }
+    
+    .actions-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/icon48.png" alt="Watermelon图标" class="logo-icon">
+      <h1>Watermelon</h1>
+    </div>
+    <p>点击下方按钮在侧边栏中打开Watermelon聊天助手</p>
+    
+    <div id="api-key-status" class="api-key-status warning" style="display: none;">
+      您尚未设置Watermelon API密钥，请先前往设置页面配置
+    </div>
+    
+    <div class="button-container">
+      <button id="open-sidebar" class="main-button">打开侧边栏</button>
+      
+      <div class="actions-container">
+        <a href="#" id="check-api-key" class="settings-link">
+          <span class="material-symbols-outlined" style="font-size: 18px;">key</span>
+          查看API状态
+        </a>
+        <a href="#" id="open-settings" class="settings-link">
+          <span class="material-symbols-outlined" style="font-size: 18px;">settings</span>
+          设置
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html> 
