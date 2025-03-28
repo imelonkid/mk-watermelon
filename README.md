@@ -108,6 +108,10 @@ Watermelon使用DeepSeek API提供智能对话功能。要配置您的API密钥�
 
 有问题或建议？请在GitHub上提交Issue。
 
+现在您的代码已经同时存在于 GitHub 和阿里云 CodeUp 两个仓库中。如果您以后需要推送更新，可以：
+使用 git push origin main 推送到 GitHub
+使用 git push codeup main 推送到阿里云 CodeUp
+
 ---
 
 <p align="center">
